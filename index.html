@@ -145,7 +145,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
     <ul>
       <li><span class="rule-pts">3 pts</span> Por acertar el ganador del partido o empate.</li>
       <li><span class="rule-pts">+1 pt</span> Por cada equipo cuyo marcador exacto aciertes.</li>
-      <li><span class="rule-pts">+1 pt</span> Por acertar el equipo en posición exacta (1ro o 2do). Si aciertas ambos se suman 3 pts adicionales.</li>
+      <li><span class="rule-pts">+1 pt</span> Por acertar el equipo en posición exacta (1ro o 2do). Si aciertas ambos se suma 1 punto adicional, dando un total de 3 pts.</li>
       <li><span class="rule-pts">+1 pt</span> Por cada equipo acertado entre los 8 mejores terceros.</li>
       <li><span class="rule-pts">+3 pts</span> Por acertar el equipo Campeón.</li>
     </ul>
@@ -322,7 +322,7 @@ function computePts(name) {
       const h2=picks[1]===st[1]?.name;
       if(h1) pts+=1;
       if(h2) pts+=1;
-      if(h1&&h2) pts+=3;
+      if(h1&&h2) pts+=1;
     }
   });
   return pts;
